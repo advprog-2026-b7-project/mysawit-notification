@@ -1,0 +1,10 @@
+services:
+  mysawit-notification:
+    build: .
+    container_name: mysawit-notification
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://host.docker.internal:5435/mysawit_notification
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: postgres
+    ports:
+      - "8084:8080"
